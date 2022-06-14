@@ -1,0 +1,23 @@
+:root {
+    --bs-body-bg: #dadbd5;
+    --bg-green-box: #009688;
+}
+
+.bg_green_box {
+    width: auto;
+    height: 150px;
+    background-color: var(--bg-green-box);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.my_main_container {
+    position: relative;
+    z-index: 1;
+    height: 95vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    background-color: white;
+}
