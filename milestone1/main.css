@@ -3,6 +3,7 @@
     --bs-gray-400: #eaeaea;
     --bs-grey-500: #b1b1b1;
 
+    --bg-text-sent: #d5f9ba;
     --bg-green-box: #009688;
     --bg-notification-color: #8edafc;
 
@@ -46,9 +47,9 @@
 }
 
 .chat_container {
-    height: 100%;
+    height: calc(100vh - 225px);
     flex-grow: 1;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 .my_avatar, .texting_avatar {
@@ -86,6 +87,7 @@
     flex-shrink: 0;
     display: flex;
     padding: .5rem;
+    height: 65px;
 }
 
 .notification_icon {
@@ -103,6 +105,7 @@
     padding: .5rem;
     background-color: var(--bs-gray-400);
     display: flex;
+    height: 50px;
 }
 
 .my_search_chat input, .texting_avatar input{
@@ -146,11 +149,38 @@
 }
 
 .chat {
+    height: calc(100vh - 225px);
     flex-grow: 1;
-    overflow: auto;
+    overflow-y: scroll;
     background-image: url("../img/mine.jpg");
+    padding: 2rem 5rem;
 }
 
 .chat-text-box {
     height: 40px;
+}
+
+.bg-text-sent {
+    background-color: var(--bg-text-sent);
+}
+
+.chat-text {
+    width: 20vw;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+
+.text-sent {
+    display: flex;
+    justify-content: end;
+}
+
+.text-recieved {
+    display: flex;
 }

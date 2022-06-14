@@ -21,6 +21,7 @@
     <div id="app">
         <div class="container my_main_container">
             <div class="row h-100">
+                <!-- sezione laterale con sidebar -->
                 <div class="col-4 pe-0">
                     <div class="sidebar">
                         <div class="my_avatar">
@@ -50,8 +51,19 @@
                             </div>
                         </div>
                         
-                        <!-- lista avatars  -->
+                        <!-- lista contatti  -->
                         <div class="chat_container">
+                            <div class="contact">
+                                <div class="d-flex gap-3">
+                                    <img class="avatar_img" src="../img/avatar_1.jpg" alt="">
+                                    <div>
+                                        <div>Michele</div>
+                                        <div class="text-muted font_xs">Ultimo messaggio inviato</div>
+                                    </div>
+                                </div>
+                                <div class="text-muted font_xs">12:00</div>
+                            </div>
+
                             <div class="contact">
                                 <div class="d-flex gap-3">
                                     <img class="avatar_img" src="../img/avatar_1.jpg" alt="">
@@ -131,6 +143,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- sezione principale con chat -->
                 <div class="col-8 ps-0">
                     <div class="main_content_container">
                         <div class="texting_avatar">
@@ -149,7 +163,26 @@
                                 <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                             </div>
                         </div>
-                        <div class="chat"></div>
+                        <div class="chat">
+                            <div class="text-sent">
+                                <div class="bg-text-sent chat-text">
+                                    <p class="mb-0">Hai portato a spasso il cane?</p>
+                                    <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                                </div>
+                            </div>
+                            <div class="text-sent">
+                                <div class="bg-text-sent chat-text">
+                                    <p class="mb-0">Ricordati di stendere i panni</p>
+                                    <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                                </div>
+                            </div>
+                            <div class="text-recieved">
+                                <div class="bg-white chat-text">
+                                    <p class="mb-0">Tutto fatto!</p>
+                                    <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                                </div>
+                            </div>
+                        </div>
                         <div class="texting_avatar">
                             <div class="px-3">
                                 <a href="#"><i class="fa-regular fa-face-smile"></i></a>
