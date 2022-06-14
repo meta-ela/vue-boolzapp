@@ -1,6 +1,16 @@
 :root {
     --bs-body-bg: #dadbd5;
+    --bs-gray-400: #eaeaea;
+    --bs-grey-500: #b1b1b1;
+
     --bg-green-box: #009688;
+    --bg-notification-color: #8edafc;
+}
+
+/* DEBUG */
+.debug-item {
+    border: 1px dashed black;
+    padding: .5rem;
 }
 
 .bg_green_box {
@@ -20,4 +30,80 @@
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
     background-color: white;
+    --bs-gutter-x: 0rem;
+}
+
+.sidebar {
+    border-right: 1px solid var(--bs-grey-500);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.chat_container {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.my_avatar {
+    background-color: var(--bs-gray-400);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    padding: .5rem;
+}
+
+.avatar_img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.fa-circle-notch, 
+.fa-message,
+.fa-ellipsis-vertical,
+.fa-magnifying-glass {
+    color: var(--bs-grey-500);
+    padding: 0rem .5rem;
+}
+
+.fa-bell-slash {
+    color: var(--bg-notification-color);
+}
+
+.my_notification {
+    background-color: var(--bg-notification-color);
+    flex-shrink: 0;
+    display: flex;
+    padding: .5rem;
+}
+
+.notification_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.my_search_chat {
+    padding: .5rem;
+    background-color: var(--bs-gray-400);
+    display: flex;
+}
+
+.my_search_chat input {
+    border: 1px solid var(--bs-gray-400);
+}
+
+.search_icon {
+    background-color: white;
+    text-align: center;
+    padding: .25rem;
+    width: 50px;
+    border: 1px solid var(--bs-grey-400);
+    
 }
