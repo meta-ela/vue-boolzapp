@@ -10,11 +10,6 @@
     --font-xs: 12px;
 }
 
-/* DEBUG */
-.debug-item {
-    border: 1px dashed black;
-    padding: .5rem;
-}
 
 .bg_green_box {
     width: auto;
@@ -47,7 +42,7 @@
 }
 
 .chat_container {
-    height: calc(100vh - 225px);
+    /* height: calc(100vh - 200px); */
     flex-grow: 1;
     overflow-y: scroll;
 }
@@ -109,7 +104,8 @@
 }
 
 .my_search_chat input, .texting_avatar input{
-    border: 1px solid var(--bs-gray-400);
+    border: 1px solid var(--bs-gray-500);
+    padding: .5rem;
 }
 
 .search_icon {
@@ -117,8 +113,7 @@
     text-align: center;
     padding: .25rem;
     width: 50px;
-    border: 1px solid var(--bs-grey-400);
-    
+    border: 1px solid var(--bs-grey-500);
 }
 
 .contact {
@@ -145,11 +140,10 @@
 .texting_avatar {
     display: flex;
     flex-shrink: 0;
-    height: 55px;
 }
 
 .chat {
-    height: calc(100vh - 225px);
+    /* height: calc(100vh - 133px); */
     flex-grow: 1;
     overflow-y: scroll;
     background-image: url("../img/mine.jpg");
