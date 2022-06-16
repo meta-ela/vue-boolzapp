@@ -104,29 +104,28 @@
                                 <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                             </div>
                         </div>
+
                         <!-- sezione centrale della chat con i messaggi -->
-                        <div class="chat"  >
-
-
-                            <div class="text-sent" v-for="message in activeUser.messages">
-                                <div class="bg-text-sent chat-text">
-                                    <p v-if="" class="mb-0">{{ message.message }}</p>
-                                    <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                        <div class="chat">
+                            <!-- tag template non scrive in html -->
+                            <template v-for="currentMessage in activeUser.messages">
+                                <!-- se il currentMessage ha lo status sent nell'oggetto allora fai questo -->
+                                <div class="d-flex justify-content-end" v-if="currentMessage.status === 'sent'">
+                                    <div class="chat-text bg-text-sent">
+                                        <p class="mb-0">{{ currentMessage.message }}</p>
+                                        <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- <div class="text-sent">
-                                <div class="bg-text-sent chat-text">
-                                    <p class="mb-0">Ricordati di stendere i panni</p>
-                                    <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                                <!--  altrimenti se ha lo status received fai questo -->
+                                <div class="d-flex" v-else="currentMessage.status === 'received'">
+                                    <div class="chat-text bg-white" >
+                                        <p class="mb-0">{{ currentMessage.message }}</p>
+                                        <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="text-recieved">
-                                <div class="bg-white chat-text">
-                                    <p class="mb-0">Tutto fatto!</p>
-                                    <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
-                                </div>
-                            </div> -->
+                            </template>
                         </div>
+
                         <!-- barra inferiore con input per i text -->
                         <div class="texting_avatar">
                             <div class="px-3">

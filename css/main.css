@@ -169,12 +169,3 @@
     padding-bottom: 0.25rem;
 }
 
-
-.text-sent {
-    display: flex;
-    justify-content: end;
-}
-
-.text-recieved {
-    display: flex;
-}
