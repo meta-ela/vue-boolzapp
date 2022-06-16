@@ -67,11 +67,11 @@
                                 </li>
                                 -->
 
-                                <li class="contact" v-for="value in contactsList" >
+                                <li class="contact" v-for="contact in contactsList" @click="setActiveUser(contact)">
                                     <div class="d-flex gap-3">
-                                        <img class="avatar_img" :src="'../img/avatar' + value.avatar + '.jpg'" :alt="value.name">
+                                        <img class="avatar_img" :src="'../img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                         <div>
-                                            <div>{{ value.name }}</div>
+                                            <div>{{ contact.name }}</div>
                                             <div class="text-muted font_xs">Ultimo messaggio inviato</div>
                                         </div>
                                     </div>
@@ -87,6 +87,7 @@
                 <!-- sezione principale con chat -->
                 <div class="col h-100">
                     <div class="main_content_container">
+                        <!-- barra superiore con contatto attivo -->
                         <div class="texting_avatar">
                             <div class="contact">
                                 <div class="d-flex gap-3">
@@ -103,14 +104,17 @@
                                 <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                             </div>
                         </div>
-                        <div class="chat">
-                            <div class="text-sent">
+                        <!-- sezione centrale della chat con i messaggi -->
+                        <div class="chat"  >
+
+
+                            <div class="text-sent" v-for="message in activeUser.messages">
                                 <div class="bg-text-sent chat-text">
-                                    <p class="mb-0">Hai portato a spasso il cane?</p>
+                                    <p v-if="" class="mb-0">{{ message.message }}</p>
                                     <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
                                 </div>
                             </div>
-                            <div class="text-sent">
+                            <!-- <div class="text-sent">
                                 <div class="bg-text-sent chat-text">
                                     <p class="mb-0">Ricordati di stendere i panni</p>
                                     <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
@@ -121,8 +125,9 @@
                                     <p class="mb-0">Tutto fatto!</p>
                                     <div class="text-muted font_xs d-flex justify-content-end">15:30</div> 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
+                        <!-- barra inferiore con input per i text -->
                         <div class="texting_avatar">
                             <div class="px-3">
                                 <a href="#"><i class="fa-regular fa-face-smile"></i></a>

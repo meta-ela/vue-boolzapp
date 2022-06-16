@@ -5,11 +5,6 @@ messaggi relativi al contatto attivo all’interno del pannello della conversazi
 ● Click sul contatto mostra la conversazione del contatto cliccato
 
 
-Milestone 3
-● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
-“enter” il testo viene aggiunto al thread sopra, come messaggio verde
-● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
-un “ok” come risposta, che apparirà dopo 1 secondo.
 */
 
 
@@ -183,7 +178,13 @@ const appVue = new Vue({
 
     data: {
         contactsList: contatti,
+        activeUser: contatti[0],
     },
 
-    methods: {},
+    methods: {
+        setActiveUser(contact) {
+            this.activeUser = contact;
+            /* console.log(activeUser); */
+        },
+    },
 });
