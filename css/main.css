@@ -169,3 +169,6 @@
     padding-bottom: 0.25rem;
 }
 
+.active {
+    background-color: var(--bs-grey-500);
+}
